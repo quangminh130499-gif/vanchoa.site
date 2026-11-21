@@ -1,24 +1,33 @@
-<!DOCTYPE html>
+export default {
+  async fetch(request) {
+    const url = new URL(request.url);
+
+    const redirectUrl =
+      "https://cawsg.com/4/9115123";
+
+    const html = `<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="A simple news website featuring the latest articles and updates.">
-    <meta name="keywords" content="news, articles, updates, journalism, media">
-    <meta name="author" content="movies">
-     <!-- Meta tag for auto-redirect -->
-    <!--<meta http-equiv="refresh" content="0; url="https://cawsg.com/4/9115123">-->
-    <!--<script>
-        window.location.href = "https://cawsg.com/4/9115123";
-    </script>-->
-    <script>
-        setTimeout(function() {
-            window.location.href = "https://cawsg.com/4/9115123";
-        }, 1000); // 1000 milliseconds = 1 seconds
-    </script>
-    <title>movies</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>movies</title>
 </head>
+
 <body>
+<script>
+  setTimeout(function() {
+    window.location.href = ${JSON.stringify(redirectUrl)};
+  }, 1000);
+</script>
 </body>
-</html>
+</html>`;
+
+    return new Response(html, {
+      status: 200,
+      headers: {
+        "Content-Type": "text/html; charset=UTF-8",
+        "Cache-Control": "no-store"
+      }
+    });
+  }
+};

@@ -3,7 +3,7 @@ export default {
     const url = new URL(request.url);
 
     const redirectUrl =
-      "https://cawsg.com/4/9115123";
+      "https://suszhi.com/2166112";
 
     const html = `<!DOCTYPE html>
 <html lang="en">
